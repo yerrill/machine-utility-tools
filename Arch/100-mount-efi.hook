@@ -1,0 +1,11 @@
+[Trigger]
+Type = Package
+Operation = Upgrade
+Target = *
+
+[Action]
+Description = Mounting Boot Partition
+When = PreTransaction
+Exec = /bin/mount /dev/nvme0n1p1 /boot
+AbortOnFail
+
